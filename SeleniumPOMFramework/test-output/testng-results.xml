@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="3" total="6" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="223172" started-at="2020-04-25T07:40:42Z" finished-at="2020-04-25T07:44:26Z">
+    <groups>
+      <group name="DeletePortfolio">
+        <method signature="MyPortfolioTest.deleteportfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="deleteportfolio" class="TestCases.MyPortfolioTest"/>
+      </group> <!-- DeletePortfolio -->
+      <group name="AddPortfolio">
+        <method signature="MyPortfolioTest.addportfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="addportfolio" class="TestCases.MyPortfolioTest"/>
+      </group> <!-- AddPortfolio -->
+      <group name="Regression">
+        <method signature="MyPortfolioTest.VerifyPortfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="VerifyPortfolio" class="TestCases.MyPortfolioTest"/>
+        <method signature="MyPortfolioTest.addportfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="addportfolio" class="TestCases.MyPortfolioTest"/>
+        <method signature="MyPortfolioTest.deleteportfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="deleteportfolio" class="TestCases.MyPortfolioTest"/>
+        <method signature="MyPortfolioTest.openPortfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="openPortfolio" class="TestCases.MyPortfolioTest"/>
+      </group> <!-- Regression -->
+      <group name="LoginTest">
+        <method signature="MyPortfolioTest.VerifyPortfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="VerifyPortfolio" class="TestCases.MyPortfolioTest"/>
+        <method signature="MyPortfolioTest.openPortfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="openPortfolio" class="TestCases.MyPortfolioTest"/>
+      </group> <!-- LoginTest -->
+    </groups>
+    <test name="Default test" duration-ms="223172" started-at="2020-04-25T07:40:42Z" finished-at="2020-04-25T07:44:26Z">
+      <class name="TestCases.MyPortfolioTest">
+        <test-method status="FAIL" signature="VerifyPortfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="VerifyPortfolio" duration-ms="16585" started-at="2020-04-25T13:10:44Z" data-provider="getOpenPortfoliotest" finished-at="2020-04-25T13:11:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Username=love@gmail.com, Password=re1234, PageTitle=, Comments=Invalid}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="junit.framework.AssertionFailedError">
+            <message>
+              <![CDATA[Password box is not appeared]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.AssertionFailedError: Password box is not appeared
+	at junit.framework.Assert.fail(Assert.java:47)
+	at BaseClasses.PageBaseClass.reportFail(PageBaseClass.java:83)
+	at BaseClasses.PageBaseClass.veriyElementIsDisplayed(PageBaseClass.java:145)
+	at PageClasses.PortfolioLoginPage.verifyPasswordField(PortfolioLoginPage.java:79)
+	at TestCases.MyPortfolioTest.VerifyPortfolio(MyPortfolioTest.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyPortfolio -->
+        <test-method status="PASS" signature="flushreport()[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="flushreport" is-config="true" duration-ms="1066" started-at="2020-04-25T13:11:00Z" finished-at="2020-04-25T13:11:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushreport -->
+        <test-method status="FAIL" signature="addportfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="addportfolio" duration-ms="10171" started-at="2020-04-25T13:11:02Z" data-provider="pnames" finished-at="2020-04-25T13:11:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{PortfolioName=Love1, Comments=L1 Stocks}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="junit.framework.AssertionFailedError">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'LOVEPREET', ip: '192.168.17.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\Hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49575}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 54bf43ed8a78bd0463dfb45e638bee7e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.AssertionFailedError: stale element reference: element is not attached to the page document
+  (Session info: chrome=81.0.4044.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'LOVEPREET', ip: '192.168.17.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\Hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:49575}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 54bf43ed8a78bd0463dfb45e638bee7e
+	at junit.framework.Assert.fail(Assert.java:47)
+	at BaseClasses.PageBaseClass.reportFail(PageBaseClass.java:83)
+	at PageClasses.MoneyPage.clickSignInLink(MoneyPage.java:32)
+	at TestCases.MyPortfolioTest.addportfolio(MyPortfolioTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addportfolio -->
+        <test-method status="PASS" signature="flushreport()[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="flushreport" is-config="true" duration-ms="531" started-at="2020-04-25T13:11:12Z" finished-at="2020-04-25T13:11:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushreport -->
+        <test-method status="PASS" signature="addportfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="addportfolio" duration-ms="28617" started-at="2020-04-25T13:11:12Z" data-provider="pnames" finished-at="2020-04-25T13:11:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{PortfolioName=Love 2, Comments=L2 Stocks}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addportfolio -->
+        <test-method status="PASS" signature="flushreport()[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="flushreport" is-config="true" duration-ms="2293" started-at="2020-04-25T13:11:41Z" finished-at="2020-04-25T13:11:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushreport -->
+        <test-method status="FAIL" signature="deleteportfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="deleteportfolio" duration-ms="84029" started-at="2020-04-25T13:11:43Z" data-provider="pnames" finished-at="2020-04-25T13:13:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{PortfolioName=Love1, Comments=L1 Stocks}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="junit.framework.AssertionFailedError">
+            <message>
+              <![CDATA[Cannot locate element with text: Love1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'LOVEPREET', ip: '192.168.17.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.AssertionFailedError: Cannot locate element with text: Love1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'LOVEPREET', ip: '192.168.17.1', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: unknown
+	at junit.framework.Assert.fail(Assert.java:47)
+	at BaseClasses.PageBaseClass.reportFail(PageBaseClass.java:83)
+	at BaseClasses.PageBaseClass.selectDropDownValue(PageBaseClass.java:182)
+	at PageClasses.MyPortfolioPage.selectPortfolio(MyPortfolioPage.java:27)
+	at TestCases.MyPortfolioTest.deleteportfolio(MyPortfolioTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteportfolio -->
+        <test-method status="PASS" signature="flushreport()[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="flushreport" is-config="true" duration-ms="639" started-at="2020-04-25T13:13:07Z" finished-at="2020-04-25T13:13:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushreport -->
+        <test-method status="PASS" signature="deleteportfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="deleteportfolio" duration-ms="44864" started-at="2020-04-25T13:13:08Z" data-provider="pnames" finished-at="2020-04-25T13:13:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{PortfolioName=Love 2, Comments=L2 Stocks}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteportfolio -->
+        <test-method status="PASS" signature="flushreport()[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="flushreport" is-config="true" duration-ms="421" started-at="2020-04-25T13:13:53Z" finished-at="2020-04-25T13:13:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushreport -->
+        <test-method status="PASS" signature="openPortfolio(java.util.Hashtable)[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="openPortfolio" duration-ms="31891" started-at="2020-04-25T13:13:53Z" data-provider="getOpenPortfoliotestdata" finished-at="2020-04-25T13:14:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Pagetitle=Zoho Home, Username=Lovepreetsngh12@rediffmail.com, Password=Love@3607, Comments=Valid Login}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPortfolio -->
+        <test-method status="PASS" signature="flushreport()[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="flushreport" is-config="true" duration-ms="285" started-at="2020-04-25T13:14:25Z" finished-at="2020-04-25T13:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushreport -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestCases.MyPortfolioTest@265ea9]" name="teardown" is-config="true" duration-ms="592" started-at="2020-04-25T13:14:26Z" finished-at="2020-04-25T13:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- TestCases.MyPortfolioTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
