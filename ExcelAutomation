@@ -1,0 +1,69 @@
+import java.io.*;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.openxmlformats.schemas.spreadsheetml.x2006.main.*;
+public class SheetAutomation {
+	public static void main(String[] args) throws Exception{
+		/* Auto filter for xlsx workbooks */
+		XSSFWorkbook my_workbook = new XSSFWorkbook();
+		XSSFSheet my_sheet = my_workbook.createSheet("Autofilter");
+		/* Create Test Data */
+		/* Add header rows */
+		Row row0 = my_sheet.createRow(0);               
+		row0.createCell(0).setCellValue("Quarter");
+		row0.createCell(1).setCellValue("Brand");
+		row0.createCell(2).setCellValue("Count");
+		/* Add test data*/
+		Row row1 = my_sheet.createRow(1);       
+		row1.createCell(0).setCellValue("Q1");
+		row1.createCell(1).setCellValue("A");
+		row1.createCell(2).setCellValue(new Double(10));
+
+		Row row2 = my_sheet.createRow(2);       
+		row2.createCell(0).setCellValue("Q1");
+		row2.createCell(1).setCellValue("B");
+		row2.createCell(2).setCellValue(new Double(15));
+
+		Row row3 = my_sheet.createRow(3);       
+		row3.createCell(0).setCellValue("Q2");
+		row3.createCell(1).setCellValue("A");
+		row3.createCell(2).setCellValue(new Double(23));
+
+		Row row4 = my_sheet.createRow(4);       
+		row4.createCell(0).setCellValue("Q2");
+		row4.createCell(1).setCellValue("C");
+		row4.createCell(2).setCellValue(new Double(24));
+
+		my_sheet.setAutoFilter(CellRangeAddress.valueOf("A1:C5"));
+		
+		/* Step-1: Get the CTAutoFilter Object */
+		CTAutoFilter sheetFilter=my_sheet.getCTWorksheet().getAutoFilter();				
+		/* Step -2: Add new Filter Column */
+		CTFilterColumn  myFilterColumn=sheetFilter.insertNewFilterColumn(0);
+		/* Step-3: Set Filter Column ID */
+		myFilterColumn.setColId(1L);
+		/* Step-4: Add a new Filter */
+		CTFilter myFilter=myFilterColumn.addNewFilters().insertNewFilter(0);
+		/* Step -5: Define Auto Filter Condition - We filter Brand with Value of "A" */
+		myFilter.setVal("C");				
+		XSSFRow r1;
+		/* Step-6: Loop through Rows and Apply Filter */
+		for(Row r : my_sheet) {
+			for (Cell c : r) {
+				if (c.getColumnIndex()==1 && !c.getStringCellValue().equals("C")) {
+					r1=(XSSFRow) c.getRow();
+					if (r1.getRowNum()!=0) { /* Ignore top row */
+						/* Hide Row that does not meet Filter Criteria */
+						r1.getCTRow().setHidden(true); }
+				}				
+			}
+		}
+
+
+		/* Write changes to the workbook */
+		FileOutputStream out = new FileOutputStream(new File("C:\\Users\\Hp\\workspace\\ExcelAutomation\\ExcelFiles\\hs.xlsx"));
+		my_workbook.write(out);
+		out.close();
+	}
+}
